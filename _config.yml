@@ -1,0 +1,66 @@
+#----------------------------
+# Site Configs
+#----------------------------
+
+# Base hostname & protocol for your site, e.g. https://example.com or https://example.github.io
+url: https://dev.orderio.id
+
+# What collections do you want to show, value is true or false
+content_pages: false
+content_blogs: false
+content_products: true
+
+#----------------------------
+# Optional Configs
+#----------------------------
+
+# Display posts on home
+# Pagination path url, e.g. /product/:num/
+paginate: 12
+paginate_path: /produk/:num/
+
+# Subpath of your site, e.g. /blog
+baseurl: 
+
+# Specifies the language of website, e.g. en_US
+# Leave blank if you want to id_ID
+lang: 
+
+# Theme color for browser tab on mobile, e.g. #265FF3
+# Leave blank if you want to #fff
+tab_color: 
+
+# Step version of media assets with date (ISO 8601, UTC format) with quotes, e.g. "2023-12-31T23:59:59+07:00"
+version: 
+
+#----------------------------
+# System Configs
+#----------------------------
+
+# Permanent links for posts and pages
+permalink: /:title/
+
+# Use the following plugins
+plugins:
+  - jekyll-postcss
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# Set the Sass partials directory, as we're using @imports
+sass:
+  style: compressed # You might prefer to minify using compressed, or unminify using expanded
+
+# PostCSS plugin configurations
+postcss:
+  cache: false
+
+# Exclude these files from your production _site
+exclude:
+  - CNAME
+  - LICENSE
+  - README.md
+  - package.json
+  - package-lock.json
+  - postcss.config.js
+  - tailwind.config.js
+  - yarn.lock
